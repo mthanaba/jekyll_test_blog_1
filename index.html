@@ -5,4 +5,10 @@ title: B&M's Travels & RemoteWorkLife
 <div class="blurb">
 	<h1>B&M's Travels & RemoteWorkLife!</h1>
 	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+
 </div><!-- /.blurb -->
+<!-- listing all blog posts -->
+	 {% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
